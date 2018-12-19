@@ -16,7 +16,7 @@
 				"navigationBarTitleText": "购物车"
 			}
 		},{
-			"path": "pages/login/mian",
+			"path": "pages/login/main",
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
@@ -49,7 +49,7 @@
 			"iconPath": "static/cart.png",
 			"selectedIconPath": "static/cart-active.png"
 		}, {
-			"pagePath": "pages/login/mian",
+			"pagePath": "pages/login/main",
 			"text": "我的",
 			"iconPath": "static/account.png",
 			"selectedIconPath": "static/account-active.png"

@@ -4,7 +4,7 @@ export const allRequest = {
     },
 	data(){
 		return {
-			url:"http://47.101.145.156/wx_zt/php/"
+			url:"http://123.207.236.84/appShop/"
 		}
 	},	
     methods: {

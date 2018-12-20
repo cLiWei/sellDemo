@@ -78,6 +78,10 @@ export const common = {
                  return 0;
              }            
          } 
-       }
+       },
+			 // 去掉左右空格
+			Trim(text) {
+				return text.replace(/(^\s*)|(\s*$)/g, "");
+			},
     }
 };

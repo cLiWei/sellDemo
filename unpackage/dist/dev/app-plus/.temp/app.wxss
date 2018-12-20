@@ -1627,3 +1627,12 @@ checkbox-group ._label {
 .uni-icon-scan:before {
   content: "\E612";
 }
+page {
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+page {
+  height: 100%;
+  width: 100%;
+}

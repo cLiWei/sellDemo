@@ -1,0 +1,8 @@
+<import src="/components/uni-nav-bar.vue.wxml" />
+<import src="/components/uni-icon.vue.wxml" />
+<template name="4ae9efe0">
+  <view class="_view data-v-8d585432">
+    <template color="#FFFFFF" background-color="transparent" fixed="true" right-icon="scan" bindclick-left="handleProxy" bindclick-right="handleProxy" data-eventid="{{'FlP-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'H8m-2'],$root, $slotdefault:'data-v-8d585432-default-H8m-2',$slotleft:'data-v-8d585432-left-H8m-2'}}"
+      is="836d77ca"></template>
+  </view>
+</template>

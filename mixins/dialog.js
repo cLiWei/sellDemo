@@ -70,37 +70,37 @@ export const dialog = {
           *
           */
         openDialog(obj){
-			let data = {
-				title:obj.title||'提示',
-				content:obj.content||'',
-				showCancel:obj.showCancel||true,
-				cancelText:obj.cancelText||"取消",
-				cancelColor:obj.cancelColor||"#000000",
-				confirmText:obj.confirmText||"确认",
-				confirmColor:obj.confirmColor||"#3CC51F",
-				confirm:obj.confirm ,
-				cancel:obj.cancel
-			}
-			uni.showModal({
-				title: data.title,
-				content: data.content,
-				showCancel:data.showCancel,
-				cancelText:data.cancelText,
-				cancelColor:data.cancelColor,
-				confirmText:data.confirmText,
-				confirmColor:data.confirmColor,
-				success(res) {
-					if(res.confirm) {
-						if(typeof data.confirm === "function"){
-							data.confirm(res)
-						}
-					}else if (res.cancel) {
-						if(typeof data.cancel === "function"){
-							data.cancel(res)
-						}
+					let data = {
+						title:obj.title||'提示',
+						content:obj.content||'',
+						showCancel:obj.showCancel||true,
+						cancelText:obj.cancelText||"取消",
+						cancelColor:obj.cancelColor||"#000000",
+						confirmText:obj.confirmText||"确认",
+						confirmColor:obj.confirmColor||"#3CC51F",
+						confirm:obj.confirm ,
+						cancel:obj.cancel
 					}
-				}
-			 });
+					uni.showModal({
+						title: data.title,
+						content: data.content,
+						showCancel:data.showCancel,
+						cancelText:data.cancelText,
+						cancelColor:data.cancelColor,
+						confirmText:data.confirmText,
+						confirmColor:data.confirmColor,
+						success(res) {
+							if(res.confirm) {
+								if(typeof data.confirm === "function"){
+									data.confirm(res)
+								}
+							}else if (res.cancel) {
+								if(typeof data.cancel === "function"){
+									data.cancel(res)
+								}
+							}
+						}
+					 });
          }
 	}
 };

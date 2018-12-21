@@ -1,0 +1,16 @@
+<template name="9d9d293a">
+  <view class="_view data-v-3704607c regiBox">
+    <view class="_view data-v-3704607c fixBox"> 用户名：
+      <input type="text" class="_input data-v-3704607c" />
+    </view>
+    <view class="_view data-v-3704607c fixBox"> 密码：
+      <input password class="_input data-v-3704607c" />
+    </view>
+    <view class="_view data-v-3704607c fixBox"> 再次输入密码：
+      <input password class="_input data-v-3704607c" />
+    </view>
+    <view class="_view data-v-3704607c fixBox">
+      <button class="_button data-v-3704607c">注册</button>
+    </view>
+  </view>
+</template>

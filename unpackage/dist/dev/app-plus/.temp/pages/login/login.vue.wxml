@@ -1,0 +1,23 @@
+<template name="5fddda4e">
+  <view class="_view data-v-dc69ba4c loginBox">
+    <view class="_view data-v-dc69ba4c fixBox"> 用户名：
+      <input type="text" value="{{user}}" bindinput="handleProxy" data-eventid="{{'oIb-0'}}" data-comkey="{{$k}}" class="_input data-v-dc69ba4c" />
+    </view>
+    <view class="_view data-v-dc69ba4c fixBox"> 密码：
+      <input password value="{{psw}}" bindinput="handleProxy" data-eventid="{{'Gva-1'}}" data-comkey="{{$k}}" class="_input data-v-dc69ba4c" />
+    </view>
+    <view class="_view data-v-dc69ba4c">
+      <checkbox-group class="_checkbox-group data-v-dc69ba4c">
+        <label class="_label data-v-dc69ba4c checkbox">
+          <checkbox checked class="_checkbox data-v-dc69ba4c"></checkbox>记住密码 </label>
+      </checkbox-group>
+      <text bindtap="handleProxy" data-eventid="{{'1ni-2'}}" data-comkey="{{$k}}" class="_text data-v-dc69ba4c">忘记密码</text>
+    </view>
+    <view class="_view data-v-dc69ba4c fixBox">
+      <button bindtap="handleProxy" data-eventid="{{'qt1-3'}}" data-comkey="{{$k}}" class="_button data-v-dc69ba4c">登录</button>
+    </view>
+    <view class="_view data-v-dc69ba4c">
+      <navigator url="register" open-type="redirect" class="_navigator data-v-dc69ba4c">没有账号？注册一下</navigator>
+    </view>
+  </view>
+</template>

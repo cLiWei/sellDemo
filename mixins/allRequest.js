@@ -14,9 +14,11 @@ export const allRequest = {
        * @param  {obj} data
       */
 			request(obj){
+				let headText = obj.type == "GET" ? 'application/json' : 'application/x-www-form-urlencoded';
 				return new Promise((resolve,reject) =>{
 					uni.request({
 						url:obj.url,
+						header:{'content-type':headText},
 						data:obj.data,
 						method:obj.type||"GET",
 						success(res){

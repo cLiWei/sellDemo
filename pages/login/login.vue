@@ -12,6 +12,7 @@
 					<checkbox  checked/>记住密码
 				</label>
 			</checkbox-group>
+			<!-- <navigator url="forgetmm" open-type="redirect">忘记密码</navigator> -->
 			<text @tap="forgetmm">忘记密码</text>
 		</view>
 		<view class="fixBox">
@@ -38,38 +39,68 @@
 			};
 		},
 		methods:{
-			// 忘记密码
-			forgetmm(){
-				
-			},
-			// 登录
-			loginBtn(){
+			// 登录数据
+			loginData(){
 				let user = this.user,
-					psw = this.psw,
-					url = this.url;
+					psw = this.psw;
+				if(!user || !psw || user =="" || psw ==""){
+					return false;
+				}
 				let data = {
 					action:'login',
 					user:this.Trim(user),
 					psw:this.Trim(psw)
 				}
-				uni.request({
-					url:url+"login/login.php",
-					data:data,
-					method:"GET",
-					success(res){
-						console.log(res);
-					},
-					fail(res) {
-						console.log(res);
+				return data;
+			},
+			// 登录后台信息
+			async loginResult(){
+				let url = this.url,
+					title ="登录提示";
+				let data = this.loginData();
+				
+				if(data){
+					let result =await this.request({
+						url:url+"login/login.php",
+						type:"POST",
+						data:data
+					})
+					let tip = this.loginTip(result.data);
+					if("登录成功!" == tip){
+						console.log(tip)
+					}else {
+						this.openDialog({
+							title:title,
+							content:tip
+						})
 					}
-				})
-// 				this.request({
-// 					url:url+"login/login.php",
-// 					
-// 					data:data
-// 				}).then((res)=>{
-// 					console.log(res);
-// 				})
+				}else{
+					this.openDialog({
+						title:title,
+						content:"用户名和密码不能为空！"
+					})
+				}
+				
+				
+			},
+			loginTip(data){
+				let error = data.error,
+					content = "";
+				if("2" == error){
+					content = "用户名不存在";
+				}else if("1" == error){
+					content = "密码不正确";
+				}else if("0" == error){
+					content = "登录成功!";
+				}else{
+					content = "网络错误，请重试！";
+				}
+				return content;
+			},
+			// 登录
+			loginBtn(){
+				this.loginResult();
+				
 				
 			}
 		},

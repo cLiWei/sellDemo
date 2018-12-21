@@ -1,0 +1,8 @@
+<template name="5032490e">
+  <view class="_view data-v-a6cb7150 myBox">
+    <view class="_view data-v-a6cb7150 head">
+      <view wx:if="{{hasLogin}}" class="_view data-v-a6cb7150 loginBtn" bindtap="handleProxy" data-eventid="{{'B90-0'}}" data-comkey="{{$k}}">登录</view>
+      <view wx:if="{{!hasLogin}}" class="_view data-v-a6cb7150">1111</view>
+    </view>
+  </view>
+</template>

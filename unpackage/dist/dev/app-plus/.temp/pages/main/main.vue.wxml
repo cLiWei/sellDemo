@@ -1,0 +1,11 @@
+<import src="/components/main/searchInput.vue.wxml" />
+<template name="7192c142">
+  <view class="_view data-v-61d7c8b4">
+    <template data="{{...$root['0'], ...$root[$kk+'M9p-0'],$root}}" is="4ae9efe0"></template>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="_swiper data-v-61d7c8b4 swiper">
+      <swiper-item wx:key="item" key="{{item}}" wx:for="{{swiperList}}" wx:for-index="index" wx:for-item="item" class="_swiper-item data-v-61d7c8b4">
+        <text class="_text data-v-61d7c8b4">{{item}}</text>
+      </swiper-item>
+    </swiper>
+  </view>
+</template>
